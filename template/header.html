@@ -1,0 +1,137 @@
+{% load static %}
+
+
+
+            <header id="header">
+                <div class="container">
+                   <div class="logo">
+            <a href="/"><img src="{% static './HomeSeawaveLogisticsfiles/1382358658_logo2.fw.png'%}" alt="Air shipment tracking system, Sea shipment tracking system, Cargo tracking system" title="worldexpresscarrier" height="61" border="0"></a>
+            <!--<h1></h1>-->
+        </div>
+        <!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+var _smartsupp = _smartsupp || {};
+_smartsupp.key = '8f2c79db5037c01a1dd6305b4a873000f55c60b4';
+window.smartsupp||(function(d) {
+  var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+  s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+  c.type='text/javascript';c.charset='utf-8';c.async=true;
+  c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+})(document);
+</script>
+
+                    
+                    <div class="quick-access">
+                        <div class="top-links">
+                        </div>
+                        
+                        <div class="flags">
+                                    
+                    <script type="text/javascript">		
+                    $(document).ready(function() { //on DOM ready
+                            $("a.change_lang").click(function() {	
+                                var self = this;
+                                var lang = $(self).attr('rel');
+                                
+                                $.ajax({
+                                    url: "Settings/language/update.html",
+                                        type: 'POST',
+                                        data: { lang_name : lang },
+                                        beforeSend: function(){								
+                                            $(self).children("span:nth-child(1)").children("img:nth-child(1)").attr('src','data/adminImages/commonImages/flag_loader.gif');	
+                                            $(self).children("span:nth-child(1)").children("img:nth-child(1)").attr('height','15');					
+                                         },
+                                        success: function(response)
+                                        {	
+                                            //alert(response);											
+                                            var json_arr = eval("("+response+")");	
+                                            var url = 'index.html';
+                                            var baseUrl = '';
+                                            var ckUrl = 'Administrator/login/auth.html';
+                                            var match_res = url.match(/Administrator\/login\/auth/g);
+                                            var tmp = false;
+                                            for (i in match_res) 
+                                            {
+                                                if(match_res[i] == ckUrl){ tmp = true;  }
+                                              //alert(i + ' : ' + match_res[i]);
+                                            }
+                                            if(tmp == true)
+                                            {
+                                                var rightUrl = baseUrl+'/Administrator';
+                                            }
+                                            else
+                                            {
+                                                var rightUrl = url;
+                                            }				
+                                                            
+                                            if(json_arr.status == 'ok')
+                                            {
+                                                document.location.href=rightUrl;													
+                                            }						
+                                        }
+                                  });
+                            });
+                        });
+                    
+                    </script>
+                    
+                    <script type="text/javascript">
+                    $(document).ready(function() {
+                        $(".dropdown img.flag").addClass(""); //flagvisibility
+                    
+                        $(".dropdown dt a").click(function() {
+                            $(".dropdown dd ul").toggle();
+                        });
+                                    
+                        $(".dropdown dd ul li a").click(function() {
+                            var text = $(this).html();
+                            $(".dropdown dt a span").html(text);
+                            $(".dropdown dd ul").hide();
+                            $("#result").html("Selected value is: " + getSelectedValue("sample"));
+                        });
+                                    
+                        function getSelectedValue(id) {
+                            return $("#" + id).find("dt a span.value").html();
+                        }
+                    
+                        $(document).bind('click', function(e) {
+                            var $clicked = $(e.target);
+                            if (! $clicked.parents().hasClass("dropdown"))
+                                $(".dropdown dd ul").hide();
+                        });
+                    
+                    
+                        $("#flagSwitcher").click(function() {
+                            $(".dropdown img.flag").toggleClass("flagvisibility");
+                        });
+                    });
+                    </script>
+                
+                <dl id="sample" class="dropdown" style="margin:0; padding:0">
+            
+
+                    <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                      new google.translate.TranslateElement({pageLanguage: 'en'}, 'sample');
+                    }
+                    </script>
+                    
+                    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                            </dl>
+                        </div>
+                    </div>
+                    
+                    <div class="support">
+                        
+                    
+                        </div>
+                    
+                    <div class="user-link">
+                        <span class="welcome">Welcome to Seawave Logistics<a href="https://iship.seawavelogs.com/Frontend-Login.html"></a><a href="https://iship.seawavelogs.com/Registration/104.html"></a></span>
+                    </div>
+                </div>
+                <link rel="stylesheet" type="text/css" href="{% static './Home - Seawave Logistics_files/style2.css'%}">
+                    <script type="text/javascript" src="{% static './Home - Seawave Logistics_files/modernizr.custom.28468.js.download'%}"></script>
+                    <link href="{% static './Home - Seawave Logistics_files/css'%}" rel="stylesheet" type="text/css">
+            
+            </header>

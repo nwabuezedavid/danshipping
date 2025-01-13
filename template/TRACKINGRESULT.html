@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)https://iship.seawavelogs.com/tResult.php?q=476576876969 -->
+<html lang="en"><div id="in-page-channel-node-id" data-channel-name="in_page_channel_n0Vggn"></div><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  {% load static %}
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <link rel="icon" href="https://iship.seawavelogs.com/favicon.ico">
+    
+    <link href="{% static './TRACKINGRESULTfiles/font-awesome.min.css'%}" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>TRACKING RESULT</title>
+
+    <!-- Bootstrap core CSS -->
+    
+    <link href="{% static './TRACKINGRESULTfiles/bootstrap.min.css'%}" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <main role="main" class="container">
+    <br><span class="pull-right">
+      {% if not request.user.username %}
+      <a href="{% url 'home' %}" class="btn btn-primary" id="">LOGOUT</a>
+      {% else %}
+      <a href="{% url 'adminb' request.user.id %}" class="btn btn-primary" id="">LOGOUT</a>
+      {% endif %}
+    </span>
+    <h5><b>TRACKING NUMBER: {{item.uuid}}</b></h5>
+    <hr>
+    <div class="row">
+      <div class="col-md-12">
+        <img src="{% static './TRACKINGRESULTfiles/logo.png'%}">
+        <br><br><br>
+        <div class="row">
+          <div class="col-md-8">
+
+                        <div style="border:1px #6d7582 solid; padding:15px;">
+                <strong>Sender Details:</strong><table class="table table-striped table-bordered table-lg">
+            <thead style="background:#990606;color:#fff;">
+              <tr><th>Sender's Name</th><th>Shippers's Address</th>
+                <th>Sender Email</th><th>Sender Phone Number</th></tr>
+              </thead>
+            <tbody>
+              <tr><td>{{item.SName}}</td><td>{{item.SAddress}}</td><td>{{item.SEmail}}</td><td>{{item.SPhone}}</td></tr>
+            </tbody>
+          </table>
+          <br><br>
+
+
+           <strong>Receiver Details:</strong><table class="table table-striped table-bordered table-lg">
+            <thead style="background:#990606; color:#fff;"><tr><th>Receiver's Name</th><th>Receiver's Address</th><th>Receiver Email</th><th>Receiver Phone Number</th></tr></thead>
+            <tbody>
+              <tr><td>{{item.RName}}</td><td>{{item.RAddress}}</td><td>{{item.REmail}}</td><td>{{item.RPhone}}</td></tr>
+            </tbody>
+          </table>
+          <br><br>
+          <strong>Origin:Destination</strong><table class="table table-striped table-bordered table-lg">
+            <thead style="background:#990606;color:#fff;"><tr><th>Origin</th><th>Destination</th><th>Mode</th><th>Carrier Reference Number</th></tr></thead>
+            <tbody>
+              <tr><td>{{item.Origin| upper}}</td><td>{{item.Destination}}</td><td>{{item.Mode}}</td><td>{{item.uuid | upper}}</td></tr>
+            </tbody>
+          </table>
+          <br><br>
+           <strong>Quantity:Weight</strong><table class="table table-striped table-bordered table-lg">
+            <thead style="background:#990606; color:#fff;"><tr>
+              <th>Quantity</th><th>Weight (Kg)</th><th>Amount ($)</th><th>Payment Mode</th></tr></thead>
+            <tbody>
+              <tr><td>{{item.Quantity}}</td><td>{{item.Weight}}</td><td>{{item.Amount}}</td><td>{{item.PaymentMode}}</td></tr>
+             </tbody>
+          </table>
+          <br>
+          <strong>Departure:Delivery</strong><table class="table table-striped table-bordered table-lg">
+            <thead style="background:#990606; color:#fff;"><tr>
+              <th width="20%">Departure Date</th><th width="20%">Delivery Date</th><th width="40%">Package Items</th><th width="20%">Notes</th></tr></thead>
+            <tbody>
+              <tr><td>{{item.DepartureDate}}</td><td>{{item.Delivery}}</td><td>{{item.PackageItems}}</td><td class="" style="word-break: break-all; word-wrap: break-word;">{{item.message}}</td></tr>
+            </tbody>
+          </table>
+              </div>
+          <br><br><br>
+          </div>
+          <div class="col-md-4">
+            <img src="{% static './TRACKINGRESULTfiles/logo2.jpeg'%}">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-8">
+            <h3><i class="fa fa-tags"></i> <strong>SHIPMENT TRAVEL HISTORY:</strong></h3>
+            <br><br>
+            <div style="border:1px #6d7582 solid; padding:15px;">
+              <table class="table table-striped table-bordered table-lg">
+            <thead style="background:#990606; color:#fff;"><tr>
+              <th width="19%">Date &amp; Time</th><th width="19%">Location</th>
+              <th width="22%">Status</th><th width="40%">Remarks</th></tr></thead>
+            <tbody>
+              {% if item.history %}
+              {% for item in item.history.all %}
+              <tr><td>{{item.datetimec}} </td><td>{{item.Location}}</td><td> {{item.Status}} </td><td>{{item.Remarks}}</td></tr>
+              {% endfor %}
+              {% endif  %}
+                           
+            </tbody>
+          </table>
+          </div>
+          <br><br><br>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    </main><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{% static './TRACKINGRESULTfiles/jquery.min.js.download"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+    <script src="{% static './TRACKINGRESULTfiles/popper.min.js.download"></script>
+    <script src="{% static './TRACKINGRESULTfiles/bootstrap.min.js.download"></script>
+  
+
+</body></html>

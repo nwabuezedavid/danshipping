@@ -1,0 +1,14 @@
+ fetch(`http://${urlx}/messages_fetch/${title.value}/`,
+    {
+      method:"POST",
+    
+      headers:{
+        'Content-Type':'application/json',
+        'X-CSRFToken':csrf.value
+      },
+      body:JSON.stringify({
+        name:name,
+        message:massage
+      })
+    }
+    )

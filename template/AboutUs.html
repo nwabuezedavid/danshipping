@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)https://iship.seawavelogs.com/About-Us.html -->
+<html dir="ltr" lang="en" class="k-webkit k-webkit120">
+   
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+{% load static %}
+
+<link rel="shortcut icon" href="https://iship.seawavelogs.com/data/adminImages/headerImages/1382360278_favicon.fw.png">
+<meta name="keywords" content="ffsservice Zend CMS">
+<meta name="description" content="franco finance service.The best website design Company in Bangladesh, Ecommerce Website Design firm, Flash multimedia, Web and eCommerce Design, Development and Outsourcing">
+<title>About Us</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="" src="{% static './AboutUsfiles/jquery.js.download'%}"></script>
+<script type="" src="{% static './/jquery-ui.custom.js.download'%}"></script>
+<link href="{% static './AboutUsfiles/jquery-ui.custom.css'%}" media="screen" rel="stylesheet" type="text/css">
+<script type="" src="{% static './AboutUsfiles/jquery.idTabs.min.js.download'%}"></script>
+<script type="" src="{% static './AboutUsfiles/slicker.js.download'%}"></script>
+<script type="" src="{% static './AboutUsfiles/common.js.download'%}"></script>
+<script type="" src="{% static './AboutUsfiles/jquery.hoverpulse.js.download'%}"></script>
+<link href="{% static './HomeSeawavLogistics_files/template.css'%}" media="screen" rel="stylesheet" type="text/css"><link href="{% static './Home - Seawave Logistics_files/general.css'%}" media="screen" rel="stylesheet" type="text/css"><script type="" src="{% static './Home - Seawave Logistics_files/kendo.web.min.js.download'%}"></script><script type="" src="{% static './Home - Seawave Logistics_files/kendo.culture.en.min.js.download'%}"></script><script type="" src="{% static './Home - Seawave Logistics_files/kendo.culture.en-US.min.js.download'%}"></script><script type="" src="{% static './Home - Seawave Logistics_files/uploader.html"></script>
+<link href="{% static './HomeSeawaveLogisticsfiles/template.css'%}" media="screen" rel="stylesheet" type="text/css">
+
+<link href="{% static './AboutUsfiles/general.css'%}" media="screen" rel="stylesheet" type="text/css">
+<script type="" src="{% static './AboutUsfiles/kendo.web.min.js.download'%}"></script>
+<script type="" src="{% static './AboutUsfiles/kendo.culture.en.min.js.download'%}"></script>
+<script type="" src="{% static './AboutUsfiles/kendo.culture.en-US.min.js.download'%}"></script>
+<script type="" src="{% static './AboutUsfiles/uploader.html'%}"></script>
+<link href="{% static './AboutUsfiles/kendo.common.css'%}" media="screen" rel="stylesheet" type="text/css">
+<link href="{% static './AboutUsfiles/kendo.uniform.css'%}" media="screen" rel="stylesheet" type="text/css">
+<link href="{% static './AboutUsfiles/pagination.css'%}" media="screen" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]>
+	<script src="../html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+</head>
+<body>
+<div id="wrapper">
+	<!-- Header Star	<!-- Header End -->
+    
+    <!-- Top Navigation Start-->
+	{% include "header.html" %}
+	{% include "nav.html" %}
+
+    <!-- Top Navigation End-->
+   
+     
+    <!-- Banner Start -->
+    <div id="banner">
+        <div class="container">
+            <div class="bg" > <img src="{% static './banner.jpg' %}" alt="" style="width: 100%; height: 100%;"></div>
+        </div>
+    </div>
+    <!-- Banner End -->
+    
+    <!-- Body Start-->
+    <section id="main-container">
+    			<!-- Content Start -->
+        <article id="content">
+        	            
+			
+<div class="mod mod-article">
+	    
+    <div class="article-icon"><h1>About Us</h1></div>
+    <div class="clear"></div>
+    
+        <div id="article_content_area"><img class="left-float" title="About Us" src="{% static './AboutUsfiles/cms.html'%}" alt="About Us" width="81" height="80">Seawave Logistics is a professional Freight Forwarding Company who has been giving all type of logistics support successfully and to the full satisfaction of its valued clients. We always look to provide excellent, quality service with proposed functionality to match client’s concept. Our qualified and experienced team of professionals is committed to helping you to build your business in the future.<br> <br> Our air and ocean freight forwarding enables customers to receive shipments expeditiously and affordably: door-to-door, airport-to airport, or sea port-to-sea port. We use the most expeditious and cost effective solutions to deliver your shipments. Exporters, Importers, Custom House Agents/ Customs Brokers, Freight Forwarders, 3PL companies, IATA cargo agents, Air Freight and Sea Freight forwarding companies and other logistics service providers</div>
+    
+    <div>
+            </div>
+    
+    <div class="clear">&nbsp;</div>
+    <hr class="dashed">
+    <!-- Getting All Comments from Comment Module and Add Comment Form -->
+        <!-- End of Getting All Comments from Comment Module Add Comment Form --> 	
+</div>            
+                        
+                    </article>
+      	<!-- Content End -->
+                <!-- Right Sidebar Start -->
+        <aside id="sidebar">
+			<script type="text/javascript">
+$(document).ready(function() {
+
+	function resetNewsLetterFields()
+	{
+		$( "#newsletter_form_box" )[ 0 ].reset();
+	}
+	
+	function removeNewsLetterError()
+	{		
+		$('#actionMessage_newsletter').html('');
+				
+		$.each($('#newsletter_form_box').serializeArray(), function(i, field) {				
+				$('#'+field.name).removeClass('ui-state-error');
+				$('#'+field.name+'_newsletter_err').html('');									
+		});			
+	}
+	
+	function addNewsLetterError(key,errMsg)
+	{
+		var err_id = key+'_box_newsletter_err';
+		var field_name = key+'_box';
+		$('#'+field_name).addClass('ui-state-error');
+		$('#'+err_id).append(errMsg);
+	}
+	
+	function getFormDataNewsLetter()
+	{
+		var fieldObj = {};
+		$.each($('#newsletter_form_box').serializeArray(), function(i, field) {	
+				fieldname = field.name.split('_box');
+				fieldObj[fieldname[0]] = field.value;										
+		});
+		return fieldObj;
+	}
+
+$('input.newsletter_snd_btn').click(function() {
+				
+		var formData = getFormDataNewsLetter();
+		
+		$.ajax({
+			url: "./Newsletter/frontend/add.html",
+			  	type: 'POST',
+			  	data: formData,
+				beforeSend: function(){						
+						removeNewsLetterError();
+						$('#newsletter_form_box').css('display','none');
+						$('#newsletter_loader_process').css('display','');			
+					 },
+				success: function(response){
+					//alert(response);					
+					var json_arr = eval("("+response+")");										
+					if(json_arr.status == 'ok')
+					{
+						$('#actionMessage_newsletter').html(succMsgDesign(json_arr.msg));	
+						$('#newsletter_loader_process').css('display','none');	
+						$('#newsletter_form_box').css('display','');
+						resetNewsLetterFields();																						
+					}
+					else if(json_arr.status == 'errV')
+					{
+						$('#actionMessage_newsletter').html(errMsgDesign("There are some error to perform this action. Please See below --"));
+						$('#newsletter_form_box').css('display','');	
+						$('#newsletter_loader_process').css('display','none');
+												
+						for(var i= 0; i < json_arr.msg.length; i++)
+						{
+							addNewsLetterError(json_arr.msg[i].key,json_arr.msg[i].value);							
+						}
+					}
+					else
+					{
+						$('#newsletter_form_box').css('display','');	
+						$('#newsletter_loader_process').css		('display','none');
+						$('#actionMessage_newsletter').html(errMsgDesign(json_arr.msg));
+					}	
+				}
+		});
+	});	
+});
+</script>
+<div class="block block-subscribe">
+    <img alt="" height="423" src="{% static './AboutUsfiles/5674731budget-couriers-delivery-man.png'%}" width="281"></div>                        <script type="text/javascript">
+$(document).ready(function() {
+
+	$('a.reset_btn').click(function() {			
+		 resetFields();	
+		 removeError();	
+	});
+	
+	
+	
+	function resetFields()
+	{
+		$( "#contactFormBox" )[ 0 ].reset();
+	}
+	
+	function removeError()
+	{		
+		$('#actionMessageBox').html('');
+		$('#security_captcha-input_box_err').html('');
+				
+		$.each($('#contactFormBox').serializeArray(), function(i, field) {				
+				$('#'+field.name).removeClass('ui-state-error');
+				$('#'+field.name+'_box_err').html('');									
+		});			
+	}
+	
+	function addQuickError(key,errMsg)
+	{
+		var err_id = key+'_box_err';
+		var field_name = key;
+		$('#'+field_name+'_box').addClass('ui-state-error');
+		$('#'+err_id).append(errMsg);
+	}
+	
+	function getFormData()
+	{
+		var fieldObj = {};
+		$.each($('#contactFormBox').serializeArray(), function(i, field) {		 					
+				fieldObj[field.name] = field.value;											
+		});
+		return fieldObj;
+	}
+	
+
+	$('a.submit_box_btn').click(function() {
+		
+		removeError();				
+		$('#actionMessageBox').html("Processing..... Wait..."+"&nbsp;<img src=\"application/layouts/scripts/logistics_default/images/loader/ajax-loader-email.gif'%}\" />");	
+		var formData = getFormData();
+		
+		$.ajax({
+			url: "./Contact/View/form.html",
+			  	type: 'POST',
+			  	data: formData,
+				success: function(response){
+					//alert(response);					
+					var json_arr = eval("("+response+")");										
+					if(json_arr.status == 'ok')
+					{
+						$('#actionMessageBox').html(succMsgDesign(json_arr.msg));	
+						resetFields();																
+					}
+					else if(json_arr.status == 'errV')
+					{
+						$('#actionMessageBox').html(errMsgDesign("There are some error to send information.Please See below --"));
+												
+						for(var i= 0; i < json_arr.msg.length; i++)
+						{
+							addQuickError(json_arr.msg[i].key,json_arr.msg[i].value);							
+						}
+					}
+					else
+					{
+						$('#actionMessageBox').html(errMsgDesign(json_arr.msg));
+					}
+					
+					if(json_arr.captcha && json_arr.captcha.status && json_arr.captcha.status == 'ok')
+					{						
+						var captcha_name = json_arr.captcha.captcha_name;
+						//alert($('input[name="'+captcha_name+'[id]"]').parents('div:first').children('img:first').attr('src'));
+						$('input[name="'+captcha_name+'[id]"]').parents('div:first').children('img:first').attr('src', json_arr.captcha.ImgUrl+json_arr.captcha.id+json_arr.captcha.Suffix);
+						$('input[name="'+captcha_name+'[id]"]').val(json_arr.captcha.id);
+						//alert($('input[name="'+captcha_name+'[id]"]').parents('td:first').children('img:first').attr('src'));						
+					}
+				},
+				error: function(xhr, status, error){
+					closeLoaderDialog();
+					var msg = "Error! " + xhr.status + " " + error;					
+					$('#actionMessage').html(errMsgDesign(msg));
+				}
+		});
+	});
+	
+});
+</script>
+<div class="block block-contact">
+    <div class="block-header">
+        <h4>QUICK CONTACT</h4>
+    </div>
+    <div class="block-body">    
+        <form id="contactFormBox" name="contactFormBox" method="post" action="https://iship.seawavelogs.com/About-Us.html#">
+            <div id="actionMessageBox"></div>
+            <p>Your Name</p>
+           	<input name="contact_name" id="contact_name_box" type="text" size="18">
+            <span class="input-errors" id="contact_name_box_err"></span>
+            
+          	<p>Email</p>
+           	<input name="contact_email" id="contact_email_box" type="text" size="18">
+           	<span class="input-errors" id="contact_email_box_err"></span>
+            
+           	<p>Phone/Cell</p>
+           	<input name="contact_phone" id="contact_phone_box" type="text" size="18">
+            <span class="input-errors" id="contact_phone_box_err"></span>
+          
+          	<p>Message</p>
+           	<textarea name="contact_message" id="contact_message_box" cols="15"></textarea>
+          	<span class="input-errors" id="contact_message_box_err"></span>
+           	                <p>Please enter the 4 letters displayed right: <span class="star_class">*</span></p>				  
+				  <div>
+                  
+<img width="60" height="28" alt="" src="{% static './AboutUsfiles/bd6cb18b26d8c87de51e94339f79230e.png'%}">
+<input type="hidden" name="security_captcha[id]" value="bd6cb18b26d8c87de51e94339f79230e" title="Please enter the 4 letters displayed left" class="" style="width:70px;" id="security_captcha-id">
+<input type="text" name="security_captcha[input]" id="security_captcha-input" value="" title="Please enter the 4 letters displayed left" class="" style="width:70px;">                  
+                
+				<span id="security_captcha-input_box_err" class="input-errors"></span>
+                </div>
+				            <div class="clear">
+           		<a href="javascript:void(0);" class="submit_box_btn">SUBMIT</a>
+            </div>
+        </form>
+    </div>            
+	<div class="block-footer"></div>
+</div>
+            <center><script type="text/javascript" src="{% static './AboutUsfiles/220.html"></script></center>
+        </aside>
+        <!-- Right Sidebar End -->
+            </section>
+    <!-- Body End -->
+    
+    <!-- Footer Start -->
+	
+<footer id="footer">
+    <div class="container">
+        <div class="links-container">
+            <div class="links">
+                <span>About Seawave Logistics:</span> 
+                <ul>
+                    <li class="first"><a href="https://iship.seawavelogs.com/Logistics-Home.html">Home</a></li>
+                    <li><a href="">About Us</a></li>
+                    <li><a hrf="">Shipment Tracking</a></li>
+                    <li><a href="https://iship.seawavelogs.com/Air-Freight.html">Air Freight</a></li>
+                    <li><a href="https://iship.seawavelogs.com/Sea-Freight.html">Ocean Freight</a></li>
+                    <li><a href="https://iship.seawavelogs.com/LCL-Truck-Load.html">Trucking Delivery</a></li>
+                </ul>
+            </div>
+            
+                        
+                     
+            <div class="social">
+                Always stay connected with us.. <br><br>
+                 <a href="http://www.facebook.com/" target="_blank"><img src="{% static './AboutUsfiles/facebook.png'%}" width="20" height="20" border="0" title="Facebook"></a>
+                 <a href="http://www.twitter.com/" target="_blank"><img src="{% static './AboutUsfiles/twitter.png'%}" width="20" height="20" border="0" title="Twitter"></a>
+                 <a href="http://www.youtube.com/" target="_blank"><img src="{% static './AboutUsfiles/youtube.png'%}" width="20" height="20" border="0" title="Youtube"></a>
+                 <a href="http://www.flickr.com/" target="_blank"><img src="{% static './AboutUsfiles/flickr.png'%}" width="20" height="20" border="0" title="Flickr"></a>
+                 <a href="http://www.delicious.com/" target="_blank"><img src="{% static './AboutUsfiles/delicious.png'%}" width="20" height="20" border="0" title="Delicious"></a>
+                 <a href="http://www.stumbleupon.com/" target="_blank"><img src="{% static './AboutUsfiles/stumbleupon.png'%}" width="20" height="20" border="0" title="Stumbleupon"></a>
+                 <a href="http://www.digg.com/" target="_blank"><img src="{% static './AboutUsfiles/digg.png'%}" width="20" height="20" border="0" title="Digg"></a>
+                 <a href="http://feeds.feedburner.com/" target="_blank"><img src="{% static './AboutUsfiles/rss.png'%}" width="20" height="20" border="0" title="RSS"></a>
+                 <a href="https://plus.google.com/" target="_blank"><img src="{% static './AboutUsfiles/google-plus-one.png'%}" width="32" height="20" border="0" title="Google +1"></a>
+            </div>
+            
+            <div class="copyright clear">
+                Copyright © 2017-2019 All Rights Reserved </div>
+        </div>
+        <div class="map">
+            <h2>Find your logistics contacts</h2>
+            <a href="https://iship.seawavelogs.com/Contact-40.html"><img src="{% static './AboutUsfiles/worldmap.png'%}" alt="Worldwide Logistics Services" width="200" height="97" border="0"></a>
+            <div class="info">Our customers are served by a Global Logistics Network, worldwide offices staffed by dedicated teams of experts.</div>
+            <div><a href="https://iship.seawavelogs.com/Contact-40.html">FIND LOCATIONS »</a></div>
+        </div>
+    </div>
+</footer>    <!-- Footer End -->
+</div>
+<div class="go-top"><a href="https://iship.seawavelogs.com/About-Us.html#top" id="scroll-top" style="display: none;">Top</a></div>
+<script type="text/javascript" src="{% static './AboutUsfiles/scroll.js.download'%}"></script>
+
+</body></html>

@@ -1,0 +1,144 @@
+{% load static %}
+<link rel="shortcut icon" href="https://iship.seawavelogs.com/data/adminImages/headerImages/1382360278_favicon.fw.png'%}"> 
+<link href="{% static './HomeSeawaveLogisticsfiles/bootstrap.min.css'%}" rel="stylesheet" type="text/css">
+<meta name="keywords" content="ffsservice, worldexpresscarrier , professional Freight Forwarding Company , logistics support , Air and Ocean freight forwarding,  Receive shipments : door-to-door, airport-to airport, or sea port-to-sea port,  deliver shipments, Exporters, Importers, Custom House Agents/ Customs Brokers, Freight Forwarders, 3PL companies, IATA cargo agents, Air Freight and Sea Freight forwarding companies and other worldexpresscarrier service providers">
+<meta name="description" content="worldexpresscarrier is a professional Freight Forwarding Company who has been giving all type of logistics support successfully.  Our air and ocean freight forwarding enables customers to receive shipments expeditiously and affordably: door-to-door, airport-to airport, or sea port-to-sea port. We use the most expeditious and cost effective solutions to deliver your shipments.
+Exporters, Importers, Custom House Agents/ Customs Brokers, Freight Forwarders, 3PL companies, IATA cargo agents, Air Freight and Sea Freight forwarding companies and other logistics service providers
+"><title>Home - worldexpresscarrier</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="" src="{% static './HomeSeawaveLogisticsfiles/jquery.js.download'%}"></script>
+<script type="" src="{% static './HomeSeawaveLogisticsfiles/jquery-ui.custom.js.download'%}">
+
+</script><link href="{% static './HomeSeawaveLogisticsfiles/jquery-ui.custom.css'%}" media="screen" rel="stylesheet" type="text/css">
+<script type="" src="{% static './HomeSeawaveLogisticsfiles/jquery.idTabs.min.js.download'%}"></script>
+<script type="" src="{% static './HomeSeawaveLogisticsfiles/slicker.js.download'%}"></script>
+<script type="" src="{% static './HomeSeawaveLogisticsfiles/common.js.download'%}"></script>
+<script type="" src="{% static './HomeSeawaveLogisticsfiles/jquery.hoverpulse.js.download'%}"></script>
+<link href="{% static './HomeSeawaveLogisticsfiles/template.css'%}" media="screen" rel="stylesheet" type="text/css">
+<link href="{% static './HomeSeawaveLogisticsfiles/general.css'%}" media="screen" rel="stylesheet" type="text/css">
+<script type="" src="{% static './HomeSeawaveLogisticsfiles/kendo.web.min.js.download'%}"></script><script type="" src="{% static './HomeSeawaveLogisticsfiles/kendo.culture.en.min.js.download'%}"></script><script type="" src="{% static './HomeSeawaveLogisticsfiles/kendo.culture.en-US.min.js.download'%}"></script><script type="" src="{% static './HomeSeawaveLogisticsfiles/uploader.html'%}"></script>
+<link href="{% static './HomeSeawaveLogisticsfiles/kendo.common.css'%}" media="screen" rel="stylesheet" type="text/css">
+<link href="{% static './HomeSeawaveLogisticsfiles/kendo.uniform.css'%}" media="screen" rel="stylesheet" type="text/css">
+	<link href="{% static './HomeSeawaveLogisticsfiles/pagination.css'%}" media="screen" rel="stylesheet" type="text/css">
+
+
+            <header id="header">
+                <div class="container">
+                    <div class="logo">
+                        <a href="https://iship.seawavelogs.com/#"><img src="{% static './Home - Seawave Logistics_files/1382358658_logo2.fw.png'%}" alt="Air shipment tracking system, Sea shipment tracking system, Cargo tracking system" title="Seawave Logistics" height="61" border="0"></a>
+                        <!--<h1></h1>-->
+                    </div>
+                    
+                    <div class="quick-access">
+                        <div class="top-links">
+                        </div>
+                        
+                        <div class="flags">
+                                    
+                    <script type="text/javascript">		
+                    $(document).ready(function() { //on DOM ready
+                            $("a.change_lang").click(function() {	
+                                var self = this;
+                                var lang = $(self).attr('rel');
+                                
+                                $.ajax({
+                                    url: "Settings/language/update.html",
+                                        type: 'POST',
+                                        data: { lang_name : lang },
+                                        beforeSend: function(){								
+                                            $(self).children("span:nth-child(1)").children("img:nth-child(1)").attr('src','data/adminImages/commonImages/flag_loader.gif');	
+                                            $(self).children("span:nth-child(1)").children("img:nth-child(1)").attr('height','15');					
+                                         },
+                                        success: function(response)
+                                        {	
+                                            //alert(response);											
+                                            var json_arr = eval("("+response+")");	
+                                            var url = 'index.html';
+                                            var baseUrl = '';
+                                            var ckUrl = 'Administrator/login/auth.html';
+                                            var match_res = url.match(/Administrator\/login\/auth/g);
+                                            var tmp = false;
+                                            for (i in match_res) 
+                                            {
+                                                if(match_res[i] == ckUrl){ tmp = true;  }
+                                              //alert(i + ' : ' + match_res[i]);
+                                            }
+                                            if(tmp == true)
+                                            {
+                                                var rightUrl = baseUrl+'/Administrator';
+                                            }
+                                            else
+                                            {
+                                                var rightUrl = url;
+                                            }				
+                                                            
+                                            if(json_arr.status == 'ok')
+                                            {
+                                                document.location.href=rightUrl;													
+                                            }						
+                                        }
+                                  });
+                            });
+                        });
+                    
+                    </script>
+                    
+                    <script type="text/javascript">
+                    $(document).ready(function() {
+                        $(".dropdown img.flag").addClass(""); //flagvisibility
+                    
+                        $(".dropdown dt a").click(function() {
+                            $(".dropdown dd ul").toggle();
+                        });
+                                    
+                        $(".dropdown dd ul li a").click(function() {
+                            var text = $(this).html();
+                            $(".dropdown dt a span").html(text);
+                            $(".dropdown dd ul").hide();
+                            $("#result").html("Selected value is: " + getSelectedValue("sample"));
+                        });
+                                    
+                        function getSelectedValue(id) {
+                            return $("#" + id).find("dt a span.value").html();
+                        }
+                    
+                        $(document).bind('click', function(e) {
+                            var $clicked = $(e.target);
+                            if (! $clicked.parents().hasClass("dropdown"))
+                                $(".dropdown dd ul").hide();
+                        });
+                    
+                    
+                        $("#flagSwitcher").click(function() {
+                            $(".dropdown img.flag").toggleClass("flagvisibility");
+                        });
+                    });
+                    </script>
+                
+                <dl id="sample" class="dropdown" style="margin:0; padding:0">
+            
+
+                    <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                      new google.translate.TranslateElement({pageLanguage: 'en'}, 'sample');
+                    }
+                    </script>
+                    
+                    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                            </dl>
+                        </div>
+                    </div>
+                    
+                    <div class="support">
+                        
+                    
+                        </div>
+                    
+                    <div class="user-link">
+                        <span class="welcome">Welcome to Seawave Logistics<a href="https://iship.seawavelogs.com/Frontend-Login.html"></a><a href="https://iship.seawavelogs.com/Registration/104.html"></a></span>
+                    </div>
+                </div>
+                <link rel="stylesheet" type="text/css" href="{% static './Home - Seawave Logistics_files/style2.css'%}">
+                    <script type="text/javascript" src="{% static './Home - Seawave Logistics_files/modernizr.custom.28468.js.download'%}"></script>
+                    <link href="{% static './Home - Seawave Logistics_files/css'%}" rel="stylesheet" type="text/css">
+            
+            </header>
