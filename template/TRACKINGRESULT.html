@@ -3,18 +3,44 @@
 <html lang="en"><div id="in-page-channel-node-id" data-channel-name="in_page_channel_n0Vggn"></div><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   {% load static %}
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
     
-    <link rel="icon" href="https://iship.seawavelogs.com/favicon.ico">
-    
-    <link href="{% static './TRACKINGRESULTfiles/font-awesome.min.css'%}" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <title>TRACKING RESULT</title>
+ 
 
-    <!-- Bootstrap core CSS -->
-    
-    <link href="{% static './TRACKINGRESULTfiles/bootstrap.min.css'%}" rel="stylesheet">
+    <!-- Page Identification -->
+    <title>Shipment for {{ item.RName }} | Tracking {{ item.uuid|upper }} | Grabbs Holding Logistics</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Dynamic Page Description -->
+    <meta name="description" content="Shipment from {{ item.SName }} to {{ item.RName }}. View shipment details, cargo information, shipping route and delivery information. Reference: {{ item.uuid|upper }}.">
+
+    <!-- Company Identification -->
+    <meta name="application-name" content="Grabbs Holding Logistics">
+    <meta name="author" content="Grabbs Holding Logistics">
+
+    <!-- Customer Identification -->
+    <meta name="sender" content="{{ item.SName }}">
+    <meta name="receiver" content="{{ item.RName }}">
+    <meta name="shipment-reference" content="{{ item.uuid|upper }}">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="https://i.pinimg.com/736x/a5/e9/4e/a5e94ee4b329ecffa04924eabe919172.jpg">
+
+    <link rel="shortcut icon" href="https://i.pinimg.com/736x/a5/e9/4e/a5e94ee4b329ecffa04924eabe919172.jpg">
+
+    <link rel="apple-touch-icon" href="https://i.pinimg.com/736x/a5/e9/4e/a5e94ee4b329ecffa04924eabe919172.jpg">
+
+    <!-- Browser Theme -->
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Font Awesome -->
+    <link href="{% static 'TRACKINGRESULTfiles/font-awesome.min.css' %}" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="{% static 'TRACKINGRESULTfiles/bootstrap.min.css' %}" rel="stylesheet">
+ 
+
   </head>
 
   <body>
