@@ -1,4 +1,4 @@
-﻿
+
 cycler==0.12.1
 Django==5.0.4
 django-cors-headers
